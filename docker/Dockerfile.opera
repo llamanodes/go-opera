@@ -7,7 +7,7 @@ COPY . .
 
 ARG GOPROXY
 RUN go mod download
-RUN make opera
+RUN make -j$(nproc) opera
 
 
 
